@@ -18,3 +18,9 @@
 ### Coverage
 Se utilizó Jacoco 
 ![cobertura.png](src/main/resources/img/cobertura.png)
+
+
+### Swagger
+Colocar en el buscador http://localhost:8080/employees/swagger-ui/index.html#/employees-controller/getOrderById
+Para poder ver el contrato
+![swagger.png](src/main/resources/img/swagger.png)
