@@ -1,0 +1,49 @@
+## Save
+
+curl --location 'http://localhost:8080/employees/save-employees' \
+--header 'Content-Type: application/json' \
+--data '[
+    {
+        "name": "Oscar",
+        "secondName": "Patricio",
+        "surname": "Sánchez Sánchez",
+        "position": "UX design",
+        "birthDay": "19/01/1992",
+        "age": 33,
+        "gender": "M"
+    },
+    {
+        "name": "Martin",
+        "secondName": "Leopoldo",
+        "surname": "Sánchez Casique",
+        "position": "UX design",
+        "birthDay": "19/01/2000",
+        "age": 35,
+        "gender": "M"
+    }
+]'
+
+## GetAll
+curl --location 'http://localhost:8080/employees/get-all-employees' \
+--header 'channel: LOL'
+
+## Update
+
+curl --location --request PATCH 'http://localhost:8080/employees/update-employee' \
+--header 'Content-Type: application/json' \
+--data '{
+    "id": 2,
+    "name": "Morticio",
+    "secondName": "Patricio",
+    "surname": "Sánchez Sánchez",
+    "position": "UX design",
+    "birthDay": "19/01/1992",
+    "age": 33,
+    "gender": "M"
+    
+
+}'
+
+## Delete
+curl --location --request DELETE 'http://localhost:8080/employees/delete-employee/2' \
+--header 'channel: LOL'
