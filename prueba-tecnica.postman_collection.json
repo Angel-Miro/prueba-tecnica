@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "699f7e41-0ea3-4373-884c-e7f8ee354d07",
+		"name": "prueba-tecnica",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20449854"
+	},
+	"item": [
+		{
+			"name": "getAllEmployees",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "channel",
+						"value": "LOL",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/employees/get-all-employees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employees",
+						"get-all-employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete-employee",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "channel",
+						"value": "LOL",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/employees/delete-employee/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employees",
+						"delete-employee",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update-employee",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "channel",
+						"value": "LOL",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 2,\n    \"name\": \"Morticio\",\n    \"secondName\": \"Patricio\",\n    \"surname\": \"Sánchez Sánchez\",\n    \"position\": \"UX design\",\n    \"birthDay\": \"19/01/1992\",\n    \"age\": 33,\n    \"gender\": \"M\"\n    \n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/employees/update-employee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employees",
+						"update-employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "save-employee",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "channel",
+						"value": "LOL",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"name\": \"Oscar\",\n        \"secondName\": \"Patricio\",\n        \"surname\": \"Sánchez Sánchez\",\n        \"position\": \"UX design\",\n        \"birthDay\": \"19/01/1992\",\n        \"age\": 33,\n        \"gender\": \"M\"\n    },\n    {\n        \"name\": \"Martin\",\n        \"secondName\": \"Leopoldo\",\n        \"surname\": \"Sánchez Casique\",\n        \"position\": \"UX design\",\n        \"birthDay\": \"19/01/2000\",\n        \"age\": 35,\n        \"gender\": \"M\"\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/employees/save-employees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employees",
+						"save-employees"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
